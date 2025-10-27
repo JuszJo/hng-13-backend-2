@@ -1,16 +1,16 @@
-// import express from "express";
-// import CountryController from "../controllers/country.controller.js";
+import express from "express";
+import CountryController from "../controllers/country.controller.js";
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.get("/image", CountryController.getStringsNLP);
+router.get("/image", CountryController.getSummaryImage);
 
-// router.get("/", CountryController.getAllStrings);
+router.get("/", CountryController.getAllCountries);
 
-// router.get("/:name", CountryController.getString);
+router.get("/:name", CountryController.getCountryByName);
 
-// router.post("/refresh", CountryController.refreshCountry);
+router.post("/refresh", CountryController.refreshCountry);
 
-// router.delete("/:name", CountryController.deleteString);
+router.delete("/:name", CountryController.deleteCountryByName);
 
-// export default router;
+export default router;

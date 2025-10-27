@@ -115,11 +115,6 @@ Fetch a single country by name.
 }
 ```
 
-### GET /summary
-Generate and return the summary image (top metrics like total population and GDP).
-
-Returns a `.png` image file located in `cache/summary.png`.
-
 ### POST /refresh
 Refetch all data from the APIs and update the local cache.
 
@@ -141,7 +136,7 @@ Refetch all data from the APIs and update the local cache.
 
 **Live endpoint example:**
 ```
-https://country-summary-production.up.railway.app
+https://hng-13-backend-2-production.up.railway.app
 ```
 
 ## 🧾 License
