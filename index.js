@@ -4,7 +4,7 @@ dotenv.config();
 
 import express from "express";
 import { pinoLogger } from "./config/pino.config.js";
-import useRoutes from "./routes/routes.js";
+// import useRoutes from "./routes/routes.js";
 
 import fs from 'fs';
 import { pool } from './db.js';
@@ -22,7 +22,7 @@ app.use(pinoLogger);
 
 const PORT = process.env.PORT || 3000;
 
-useRoutes(app);
+// useRoutes(app);
 
 app.listen(PORT, async () => {
   console.log(`Listening on http://localhost:${PORT}`);
