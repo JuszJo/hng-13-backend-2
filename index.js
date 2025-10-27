@@ -11,12 +11,6 @@ import { pool } from './db.js';
 
 const sql = fs.readFileSync('./migrations/create_tables.sql', 'utf8');
 
-(async () => {
-  await pool.query(sql);
-  console.log('Schema applied successfully');
-  process.exit(0);
-})();
-
 
 const app = express();
 
@@ -30,6 +24,9 @@ const PORT = process.env.PORT || 3000;
 
 useRoutes(app);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Listening on http://localhost:${PORT}`);
+
+  await pool.query(sql);
+  console.log('Schema applied successfully');
 })
